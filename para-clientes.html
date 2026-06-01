@@ -1012,8 +1012,8 @@
 
     /* somos para você */
     .pc-somos { position: relative; overflow: hidden; height: 583px; background: #fff; }
-    .pc-somos-img { position: absolute; left: calc(50% + 18px); top: -123px; width: 907.144px; height: 841.632px; pointer-events: none; z-index: 0; }
-    .pc-somos-img img { width: 100%; height: 100%; display: block; }
+    .pc-somos-img { position: absolute; left: calc(50% + 18px); top: -120px; width: 907px; height: 915px; pointer-events: none; z-index: 0; transform: scaleX(-1); overflow: visible; }
+    .pc-somos-img img { width: 100%; height: 100%; object-fit: contain; display: block; }
     .pc-somos-inner { max-width: 1216px; margin: 0 auto; padding: 0 var(--pad); height: 100%; display: flex; align-items: center; position: relative; z-index: 1; }
     .pc-somos-card { width: 535px; padding: 32px 32px 32px 0; }
     .pc-somos-title { font-family: var(--font-heading); font-weight: 300; font-size: 42px; line-height: 1.25; color: #191717; margin-bottom: 5px; }
@@ -1033,8 +1033,7 @@
     .pc-pronto-right { flex: 1; }
 
     /* formulário */
-    .pc-form { background: var(--blue-mid); border-top: none; padding: 72px var(--pad) 80px; border-radius: 76px 76px 0 0; position: relative; overflow: hidden; }
-    .pc-form::before { content: ''; position: absolute; inset: 0; background-image: url(assets/form-pattern.png); background-repeat: repeat; background-size: 52px 36px; opacity: 0.7; pointer-events: none; z-index: 0; }
+    .pc-form { background: var(--blue-mid) url(assets/form-bg.webp) center top / cover no-repeat; border-top: none; padding: 72px var(--pad) 80px; border-radius: 76px 76px 0 0; position: relative; overflow: hidden; }
     .pc-form-inner { max-width: 1216px; margin: 0 auto; text-align: center; position: relative; z-index: 1; }
     .pc-form-tag { font-family: var(--font-heading); font-weight: 500; font-size: 14px; color: rgba(255,255,255,0.75); text-transform: uppercase; letter-spacing: .05em; margin-bottom: 12px; }
     .pc-form-heading { font-family: var(--font-heading); font-weight: 600; font-size: 42px; line-height: 1.37; color: #fff; margin-bottom: 10px; }
@@ -1285,7 +1284,7 @@
 
       /* PC-SOMOS */
       .pc-somos { height: auto; padding-bottom: 48px; overflow: hidden; }
-      .pc-somos-img { display: block; position: relative; left: 0; top: 0; width: 100%; height: 270px; }
+      .pc-somos-img { display: block; position: relative; left: 0; top: 0; width: 100%; height: 270px; transform: none; overflow: hidden; }
       .pc-somos-img img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; }
       .pc-somos-inner { height: auto; padding: 24px var(--pad) 0; display: block; }
       .pc-somos-card { width: 100%; padding: 0; }
@@ -1550,7 +1549,7 @@
 
   <!-- SOMOS PARA VOCÊ -->
   <section class="pc-somos">
-    <div class="pc-somos-img"><img src="assets/somos-homem.webp" alt="" /></div>
+    <div class="pc-somos-img"><img src="assets/pp-hero-photo.webp" alt="Especialista Trajetto" loading="lazy" /></div>
     <div class="pc-somos-inner">
       <div class="pc-somos-card">
         <h2 class="pc-somos-title">Somos para Você que:</h2>
