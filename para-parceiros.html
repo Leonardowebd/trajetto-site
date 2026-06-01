@@ -1074,12 +1074,12 @@
     .pp-hero-title { font-family: var(--font-heading); font-weight: 400; font-size: 36px; line-height: 1.2; color: #191717; margin-bottom: 20px; }
     .pp-hero-desc { font-family: var(--font-body); font-size: 17px; line-height: 1.5; color: var(--text-mid); margin-bottom: 28px; max-width: 555px; }
     .pp-hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; }
-    .pp-hero-photo { position: absolute; right: 0; top: 0; bottom: 0; width: 48%; max-width: 760px; z-index: 0; overflow: hidden; clip-path: polygon(16% 0, 100% 0, 100% 100%, 0% 100%); }
+    .pp-hero-photo { position: absolute; right: 0; top: 0; bottom: 0; width: 46%; max-width: 740px; z-index: 0; overflow: hidden; }
     .pp-hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
 
     /* LIQUIDEZ+ */
     .pp-liquidez { position: relative; overflow: hidden; padding: 80px var(--pad); background: #fff; }
-    .pp-liquidez-bg { position: absolute; left: calc(50% + 977px); top: -301.9px; width: 1722.54px; height: 1748.57px; pointer-events: none; z-index: 0; }
+    .pp-liquidez-bg { position: absolute; left: calc(50% + 110px); top: -220px; width: 1722.54px; height: 1748.57px; pointer-events: none; z-index: 0; }
     .pp-liquidez-bg svg { width: 100%; height: 100%; display: block; }
     .pp-liquidez-inner { max-width: 1216px; margin: 0 auto; position: relative; z-index: 1; }
     .pp-liquidez-head { text-align: center; max-width: 992px; margin: 0 auto 48px; }
@@ -1114,13 +1114,13 @@
     .pp-pill { display: inline-block; padding: 8px 22px; border: 1px solid rgba(255,255,255,.55); border-radius: 100px; font-family: var(--font-mono); font-size: 12px; letter-spacing: .03em; color: #fff; margin-bottom: 20px; backdrop-filter: blur(4px); }
     .pp-antecipe-title { font-family: var(--font-heading); font-weight: 600; font-size: 42px; line-height: 1.2; color: #fff; margin-bottom: 40px; }
     .pp-antecipe-cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 61px; }
-    .pp-antecipe-card { border: 1px solid rgba(255,255,255,.35); border-radius: 12px; padding: 32.8px; text-align: left; }
-    .pp-antecipe-card h3 { font-family: var(--font-heading); font-weight: 500; font-size: 22px; line-height: 1.2; color: #fff; margin-bottom: 14px; }
-    .pp-antecipe-card p { font-family: var(--font-mono); font-size: 16px; line-height: 1.5; color: rgba(255,255,255,.85); }
+    .pp-antecipe-card { background: #fff; border: 1px solid var(--border); border-radius: 0 12px 0 12px; padding: 32.8px; text-align: left; box-shadow: 4px 7px 17px rgba(0,0,0,.04), 17px 26px 32px rgba(0,0,0,.03); }
+    .pp-antecipe-card h3 { font-family: var(--font-heading); font-weight: 300; font-size: 20px; line-height: 1.2; color: #0d0e0e; margin-bottom: 10px; }
+    .pp-antecipe-card p { font-family: var(--font-mono); font-size: 16px; line-height: 1.5; color: var(--text-gray); }
 
     /* ONBOARDING */
     .pp-onboarding { position: relative; overflow: hidden; background: #fff; padding: 45px var(--pad) 60px; }
-    .pp-onboarding-bg { position: absolute; left: calc(50% - 1311px); top: -227px; width: 1683.63px; height: 1537.14px; pointer-events: none; z-index: 0; opacity: .92; }
+    .pp-onboarding-bg { position: absolute; left: calc(50% - 1330px); top: -375px; width: 1683.63px; height: 1537.14px; pointer-events: none; z-index: 0; opacity: .85; }
     .pp-onboarding-bg svg { width: 100%; height: 100%; display: block; }
     .pp-onboarding-inner { max-width: 1274px; margin: 0 auto; position: relative; z-index: 1; }
     .pp-onboarding-title { text-align: center; font-family: var(--font-heading); font-weight: 600; font-size: 42px; line-height: 1.2; color: #191717; margin-bottom: 48px; }
@@ -1399,7 +1399,7 @@
 
       /* PP-LIQUIDEZ */
       .pp-liquidez { padding: 48px var(--pad); }
-      .pp-liquidez-bg { display: none; }
+      .pp-liquidez-bg { display: block; left: auto; right: -250px; top: auto; bottom: -130px; width: 500px; height: 508px; opacity: .85; }
       .pp-liquidez-title { font-size: 28px; }
       .pp-liquidez-desc { font-size: 15px; line-height: 1.55; }
       .pp-models { grid-template-columns: 1fr; gap: 20px; }
@@ -1424,7 +1424,7 @@
 
       /* PP-ONBOARDING */
       .pp-onboarding { padding: 40px var(--pad) 48px; }
-      .pp-onboarding-bg { display: none; }
+      .pp-onboarding-bg { display: block; left: -290px; right: auto; top: 90px; width: 500px; height: 457px; opacity: .8; }
       .pp-onboarding-title { font-size: 26px; margin-bottom: 28px; }
       .pp-steps { grid-template-columns: 1fr; gap: 28px; }
       .pp-step-title { font-size: 18px; }
@@ -1545,7 +1545,7 @@
 
   <!-- HERO -->
   <section class="pp-hero reveal">
-    <div class="pp-hero-photo"><img src="assets/somos-homem.webp" alt="Especialista Trajetto" loading="eager" /></div>
+    <div class="pp-hero-photo"><img src="assets/pp-hero-photo.webp" alt="Especialista Trajetto" loading="eager" fetchpriority="high" /></div>
     <div class="pp-hero-inner">
       <div class="pp-hero-text">
         <h1 class="pp-hero-title">Operações com mais margem,<br>mais previsibilidade e menos risco.</h1>

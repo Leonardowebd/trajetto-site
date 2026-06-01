@@ -1257,8 +1257,8 @@
       .accordion-a { font-size: 15px; }
 
       /* PC-HERO */
-      .pc-hero { padding: 40px 0 48px; }
-      .pc-hero-bg { display: none; }
+      .pc-hero { padding: 40px 0 48px; overflow: hidden; }
+      .pc-hero-bg { display: block; left: auto; right: -160px; top: -70px; width: 420px; height: 426px; opacity: .45; }
       .pc-hero-title { font-size: 26px; line-height: 1.25; white-space: normal; margin-bottom: 16px; }
       .pc-video { width: 100%; aspect-ratio: 16/9; border-radius: 8px 0 8px 0; }
       .pc-hero-desc { font-size: 15px; line-height: 1.55; margin-top: 16px; }
@@ -1275,7 +1275,7 @@
 
       /* PC-PORQUE */
       .pc-porque { padding: 0 var(--pad); }
-      .pc-porque-bg { display: none; }
+      .pc-porque-bg { display: block; left: -280px; top: 120px; width: 470px; height: 429px; opacity: .5; }
       .pc-porque-header { padding-top: 48px; }
       .pc-porque-heading { font-size: 26px; }
       .pc-porque-cards { grid-template-columns: 1fr; gap: 14px; max-width: 100%; margin-top: 28px; padding-bottom: 48px; }
@@ -1284,9 +1284,10 @@
       .pc-porque-desc { font-size: 14px; }
 
       /* PC-SOMOS */
-      .pc-somos { height: auto; padding-bottom: 48px; overflow: visible; }
-      .pc-somos-img { display: none; }
-      .pc-somos-inner { height: auto; padding: 40px var(--pad) 0; display: block; }
+      .pc-somos { height: auto; padding-bottom: 48px; overflow: hidden; }
+      .pc-somos-img { display: block; position: relative; left: 0; top: 0; width: 100%; height: 270px; }
+      .pc-somos-img img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; }
+      .pc-somos-inner { height: auto; padding: 24px var(--pad) 0; display: block; }
       .pc-somos-card { width: 100%; padding: 0; }
       .pc-somos-title { font-size: 26px; }
       .pc-somos-sub { font-size: 16px; margin-bottom: 20px; }
