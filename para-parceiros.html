@@ -1074,8 +1074,8 @@
     .pp-hero-title { font-family: var(--font-heading); font-weight: 400; font-size: 36px; line-height: 1.2; color: #191717; margin-bottom: 20px; }
     .pp-hero-desc { font-family: var(--font-body); font-size: 17px; line-height: 1.5; color: var(--text-mid); margin-bottom: 28px; max-width: 555px; }
     .pp-hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; }
-    .pp-hero-photo { position: absolute; right: 0; top: 0; bottom: 0; width: 46%; max-width: 740px; z-index: 0; overflow: hidden; }
-    .pp-hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
+    .pp-hero-photo { position: absolute; left: calc(50% + 18px); right: auto; top: -120px; bottom: auto; width: 907px; height: 915px; max-width: none; z-index: 0; overflow: visible; transform: scaleX(-1); }
+    .pp-hero-photo img { width: 100%; height: 100%; object-fit: contain; object-position: center; display: block; }
 
     /* LIQUIDEZ+ */
     .pp-liquidez { position: relative; overflow: hidden; padding: 80px var(--pad); background: #fff; }
@@ -1120,7 +1120,7 @@
 
     /* ONBOARDING */
     .pp-onboarding { position: relative; overflow: hidden; background: #fff; padding: 45px var(--pad) 60px; }
-    .pp-onboarding-bg { position: absolute; left: calc(50% - 1330px); top: -375px; width: 1683.63px; height: 1537.14px; pointer-events: none; z-index: 0; opacity: .85; }
+    .pp-onboarding-bg { position: absolute; left: -571.68px; top: -227.1px; width: 1683.63px; height: 1537.14px; pointer-events: none; z-index: 0; }
     .pp-onboarding-bg svg { width: 100%; height: 100%; display: block; }
     .pp-onboarding-inner { max-width: 1274px; margin: 0 auto; position: relative; z-index: 1; }
     .pp-onboarding-title { text-align: center; font-family: var(--font-heading); font-weight: 600; font-size: 42px; line-height: 1.2; color: #191717; margin-bottom: 48px; }
@@ -1389,8 +1389,8 @@
       /* PP-HERO — foto vira faixa topo, texto abaixo */
       .pp-hero { overflow: visible; }
       .pp-hero-inner { flex-direction: column; min-height: 0; padding: 0 0 40px; }
-      .pp-hero-photo { position: relative; width: 100%; max-width: 100%; height: 240px; clip-path: none; margin-bottom: 28px; }
-      .pp-hero-photo img { object-position: center 30%; }
+      .pp-hero-photo { position: relative; left: auto; top: auto; width: 100%; max-width: 100%; height: 260px; clip-path: none; margin-bottom: 28px; transform: none; overflow: hidden; }
+      .pp-hero-photo img { object-fit: cover; object-position: center 25%; }
       .pp-hero-text { width: 100%; padding: 0 var(--pad); }
       .pp-hero-title { font-size: 26px; line-height: 1.25; margin-bottom: 16px; }
       .pp-hero-desc { font-size: 15px; line-height: 1.55; margin-bottom: 24px; }
