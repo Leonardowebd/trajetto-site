@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://trajetto.com.br/sitemap.xml
