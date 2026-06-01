@@ -1146,6 +1146,12 @@
     @media (max-width: 768px) {
       :root { --pad: 20px; }
 
+      /* HEADLINES MOBILE — sem palavras orfas, tamanho confortavel */
+      h1, h2, h3 { text-wrap: balance; overflow-wrap: break-word; }
+      p, li { text-wrap: pretty; }
+      h1 br, h2 br, h3 br, p br, span br { display: none; }
+
+
       /* NAVBAR — hamburger */
       .navbar-divider { display: none; }
       .navbar-toggle {
@@ -1425,7 +1431,7 @@
 
       /* PP-ONBOARDING */
       .pp-onboarding { padding: 40px var(--pad) 48px; }
-      .pp-onboarding-bg { display: block; left: -290px; right: auto; top: 90px; width: 500px; height: 457px; opacity: .8; }
+      .pp-onboarding-bg { display: block; left: -310px; right: auto; top: 330px; width: 540px; height: 493px; opacity: .8; }
       .pp-onboarding-title { font-size: 26px; margin-bottom: 28px; }
       .pp-steps { grid-template-columns: 1fr; gap: 28px; }
       .pp-step-title { font-size: 18px; }
@@ -1549,7 +1555,7 @@
     <div class="pp-hero-photo"><img src="assets/pp-hero-photo.webp" alt="Especialista Trajetto" loading="eager" fetchpriority="high" /></div>
     <div class="pp-hero-inner">
       <div class="pp-hero-text">
-        <h1 class="pp-hero-title">Operações com mais margem,<br>mais previsibilidade e menos risco.</h1>
+        <h1 class="pp-hero-title">Operações com mais margem, <br> mais previsibilidade e menos risco.</h1>
         <p class="pp-hero-desc">A Trajetto oferece inteligência financeira e estrutura operacional para lojas, revendas e empresas do setor automotivo. Dois modelos: Liquidez+ para clientes financiados e acesso antecipado ao portfólio de retomados por bancos.</p>
         <div class="pp-hero-ctas">
           <a href="#" class="btn-wpp">Falar no Whatsapp agora
@@ -1608,7 +1614,7 @@
         <p class="pp-portfolio-desc">Veículos retomados por financeiras chegam ao leilão e, na maioria das vezes, já perderam margem. A Trajetto disponibiliza um portfólio exclusivo para parceiros credenciados acessarem essas oportunidades antes que cheguem ao mercado aberto.</p>
         <div class="pp-portfolio-hl">
           <img src="assets/ic-check-shield.svg" alt="" />
-          <span>Acesso antecipado. Maior margem.<br>Operação segura.</span>
+          <span>Acesso antecipado. Maior margem. <br> Operação segura.</span>
         </div>
         <p class="pp-portfolio-note">Parceiros cadastrados acessam um portfólio atualizado com informações completas: histórico, condição, documentação e precificação estratégica. Antes do leilão. Antes da concorrência.</p>
       </div>

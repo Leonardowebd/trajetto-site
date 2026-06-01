@@ -982,6 +982,12 @@
     @media (max-width: 768px) {
       :root { --pad: 20px; }
 
+      /* HEADLINES MOBILE — sem palavras orfas, tamanho confortavel */
+      h1, h2, h3 { text-wrap: balance; overflow-wrap: break-word; }
+      p, li { text-wrap: pretty; }
+      h1 br, h2 br, h3 br, p br, span br { display: none; }
+
+
       /* NAVBAR — hamburger */
       .navbar-divider { display: none; }
       .navbar-toggle {
@@ -1292,10 +1298,10 @@
       </div>
       <div class="hero-card">
         <h1 class="hero-heading">
-          Negocie o seu veículo<br>com segurança e a<br><span>melhor avaliação.</span>
+          Negocie o seu veículo <br> com segurança e a <br> <span>melhor avaliação.</span>
         </h1>
         <p class="hero-sub">
-          A Trajetto conduz a venda, troca e<br>quitação do seu veículo com inteligência<br>financeira, segurança jurídica e rede<br>qualificada de compradores.
+          A Trajetto conduz a venda, troca e <br> quitação do seu veículo com inteligência <br> financeira, segurança jurídica e rede <br> qualificada de compradores.
         </p>
         <div class="hero-ctas">
           <a href="#" class="btn-hero-primary">
@@ -1398,9 +1404,7 @@
       <div class="services-header">
         <div class="section-tag" style="color:var(--blue-dark);font-family:var(--font-body);font-size:14px;">O que a Trajetto faz</div>
         <h2 class="services-heading-main">
-          Negócios automotivos do jeito certo.<br />
-          Transparência, agilidade e suporte completo<br />
-          do anúncio à transferência.
+          Negócios automotivos do jeito certo. <br> Transparência, agilidade e suporte completo <br> do anúncio à transferência.
         </h2>
         <p class="section-sub">Intermediação de veículos com transparência total e suporte do início ao fim.</p>
         <div class="services-cta" style="margin-top:20px;">
@@ -1518,9 +1522,7 @@
       </div>
       <div class="veiculo-right">
         <h2 class="veiculo-heading">
-          O seu veiculo negociado<br />
-          com inteligência, segurança<br />
-          e Zero burocracia.
+          O seu veiculo negociado <br> com inteligência, segurança <br> e Zero burocracia.
         </h2>
         <p class="veiculo-desc">
           Da avaliação à venda, a Trajetto cuida de tudo para você.

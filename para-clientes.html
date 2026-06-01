@@ -1070,6 +1070,12 @@
     @media (max-width: 768px) {
       :root { --pad: 20px; }
 
+      /* HEADLINES MOBILE — sem palavras orfas, tamanho confortavel */
+      h1, h2, h3 { text-wrap: balance; overflow-wrap: break-word; }
+      p, li { text-wrap: pretty; }
+      h1 br, h2 br, h3 br, p br, span br { display: none; }
+
+
       /* NAVBAR — hamburger */
       .navbar-divider { display: none; }
       .navbar-toggle {
@@ -1432,7 +1438,7 @@
       </svg>
     </div>
     <div class="pc-hero-inner">
-      <h1 class="pc-hero-title">Negociar o seu veículo com segurança<br>começa com o método certo.</h1>
+      <h1 class="pc-hero-title">Negociar o seu veículo com segurança <br> começa com o método certo.</h1>
       <div class="pc-video">
         <video controls preload="metadata" poster="">
           <source src="assets/video-clientes.mp4" type="video/mp4" />
