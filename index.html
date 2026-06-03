@@ -395,6 +395,22 @@
       object-fit: cover;
       object-position: top center;
     }
+    .card-hat {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      z-index: 2;
+      background: rgba(255,255,255,.92);
+      color: var(--blue-dark);
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 12px;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      padding: 6px 13px;
+      border-radius: 100px;
+      box-shadow: 0 2px 8px rgba(0,0,0,.12);
+    }
     .card-content {
       flex: 1;
       padding: 32px;
@@ -1349,12 +1365,13 @@
       <div class="connect-header">
         <div class="section-tag">SEU PRÓXIMO PASSO</div>
         <h2 class="section-heading">Conecte-se conosco do seu jeito</h2>
-        <p class="section-sub">Escolha como quer fazer parte da revolução no recrutamento.</p>
+        <p class="section-sub">Escolha o caminho ideal para você ou para o seu negócio.</p>
       </div>
       <div class="connect-cards">
         <!-- Card 1 -->
         <div class="connect-card">
           <div class="card-photo">
+            <span class="card-hat">Para Clientes</span>
             <img class="card-photo-bg" src="assets/connect-box-bg.svg" alt="" />
             <img class="card-photo-person" src="assets/connect-person2.webp" alt="Pessoa"  loading="lazy" decoding="async" />
           </div>
@@ -1364,7 +1381,7 @@
               <div class="card-divider"></div>
               <p class="card-desc">Venda, troca, consignação ou quitação de financiamento. A equipe conduz todo o processo com segurança e previsibilidade.</p>
             </div>
-            <a href="#" class="card-link">
+            <a href="/para-clientes" class="card-link">
               Veja como funciona
               <img src="assets/ic-arrow.svg" alt="→" />
             </a>
@@ -1373,6 +1390,7 @@
         <!-- Card 2 -->
         <div class="connect-card">
           <div class="card-photo">
+            <span class="card-hat">Para Parceiros</span>
             <img class="card-photo-bg" src="assets/connect-box-bg.svg" alt="" />
             <img class="card-photo-person" src="assets/connect-person1.webp" alt="Pessoa"  loading="lazy" decoding="async" />
           </div>
@@ -1382,8 +1400,8 @@
               <div class="card-divider"></div>
               <p class="card-desc">Lojas e empresas com CNPJ. Dois modelos de parceria: Trajetto Liquidez+ e acesso ao portfólio de retomados.</p>
             </div>
-            <a href="#" class="card-link">
-              Quero ver as Vagas
+            <a href="/para-parceiros" class="card-link">
+              Conhecer parceria
               <img src="assets/ic-arrow.svg" alt="→" />
             </a>
           </div>
