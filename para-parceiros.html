@@ -1138,34 +1138,49 @@
     .pp-hero-text { width: 100% !important; max-width: min(500px, calc(50vw - var(--pad) - 24px)) !important; }
 
     /* ─── CENTRAL DO PARCEIRO ─── */
-    .pp-central { background: #0b0f1a; padding: 64px var(--pad) 100px; }
-    .pp-central-inner { max-width: 1216px; margin: 0 auto; }
-    .pp-central-tag { display: inline-block; padding: 6px 16px; border: 1px solid rgba(255,255,255,0.28); border-radius: 100px; font-family: var(--font-mono); font-size: 11px; letter-spacing: .09em; color: rgba(255,255,255,0.62); text-transform: uppercase; margin-bottom: 20px; }
-    .pp-central-title { font-family: var(--font-heading); font-weight: 700; font-size: clamp(28px,3.5vw,48px); line-height: 1.1; color: #fff; margin-bottom: 10px; }
-    .pp-central-desc { font-family: var(--font-body); font-size: 17px; line-height: 1.5; color: rgba(255,255,255,0.48); margin-bottom: 28px; max-width: 560px; }
-    .pp-central-tabs { display: inline-flex; border: 1px solid rgba(255,255,255,0.16); border-radius: 4px; overflow: hidden; margin-bottom: 28px; }
-    .pp-central-tab { background: transparent; border: none; cursor: pointer; font-family: var(--font-body); font-size: 15px; font-weight: 500; color: rgba(255,255,255,0.5); padding: 10px 28px; transition: background .18s, color .18s; }
+    /* CENTRAL DO PARCEIRO (redesign) */
+    .pp-central { background: #0b0f1a; padding: 0; }
+    .pp-central-wrap { max-width: 1440px; margin: 0 auto; display: grid; grid-template-columns: 1fr 42%; min-height: 680px; }
+    .pp-central-left { padding: 72px 64px 72px max(var(--pad), 132px); display: flex; flex-direction: column; justify-content: center; }
+    .pp-central-right { position: relative; overflow: hidden; background: #111827; }
+    .pp-central-right img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 20%; opacity: .65; }
+    .pp-central-right-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0,136,231,.35), rgba(3,28,173,.55)); }
+    .pp-central-right-quote { position: absolute; bottom: 48px; left: 40px; right: 40px; }
+    .pp-central-right-quote blockquote { font-family: var(--font-heading); font-weight: 400; font-size: 20px; line-height: 1.45; color: #fff; margin-bottom: 14px; }
+    .pp-central-right-quote cite { font-family: var(--font-mono); font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: rgba(255,255,255,.55); font-style: normal; }
+    .pp-central-title { font-family: var(--font-heading); font-weight: 700; font-size: clamp(26px,3vw,42px); line-height: 1.1; color: #fff; margin-bottom: 8px; }
+    .pp-central-desc { font-family: var(--font-body); font-size: 16px; line-height: 1.55; color: rgba(255,255,255,.45); margin-bottom: 32px; max-width: 500px; }
+    .pp-central-tabs { display: inline-flex; background: rgba(255,255,255,.06); border-radius: 100px; padding: 4px; gap: 2px; margin-bottom: 32px; }
+    .pp-central-tab { background: transparent; border: none; cursor: pointer; font-family: var(--font-body); font-size: 14px; font-weight: 600; color: rgba(255,255,255,.45); padding: 9px 24px; border-radius: 100px; transition: background .18s, color .18s; white-space: nowrap; }
     .pp-central-tab.active { background: #0088e7; color: #fff; }
-    .pp-central-tab:hover:not(.active) { color: #fff; background: rgba(255,255,255,0.05); }
-    /* form card */
-    .pp-form-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.09); border-radius: 8px; padding: 36px; max-width: 560px; }
-    .pp-form-card-title { font-family: var(--font-body); font-weight: 700; font-size: 15px; color: #fff; margin-bottom: 20px; }
-    .pp-form-field { border-bottom: 1px solid rgba(255,255,255,0.13); }
-    .pp-form-field input { background: transparent; border: none; outline: none; font-family: var(--font-body); font-size: 14px; color: rgba(255,255,255,0.52); padding: 14px 0; width: 100%; }
-    .pp-form-field input::placeholder { color: rgba(255,255,255,0.36); }
+    .pp-central-tab:hover:not(.active) { color: #fff; }
+    .pp-form-card { background: transparent; border: none; padding: 0; max-width: 460px; }
+    .pp-form-card-title { font-family: var(--font-mono); font-weight: 600; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: rgba(255,255,255,.35); margin-bottom: 18px; }
+    .pp-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0 24px; }
+    .pp-form-field { border-bottom: 1px solid rgba(255,255,255,.13); margin-bottom: 4px; }
+    .pp-form-field label { display: block; font-family: var(--font-mono); font-size: 10px; letter-spacing: .08em; text-transform: uppercase; color: rgba(255,255,255,.35); padding-top: 12px; }
+    .pp-form-field input, .pp-form-field select { background: transparent; border: none; outline: none; font-family: var(--font-body); font-size: 15px; color: #fff; padding: 6px 0 12px; width: 100%; }
+    .pp-form-field input::placeholder { color: rgba(255,255,255,.28); }
     .pp-form-field input:focus { color: #fff; }
-    .pp-form-actions { display: flex; flex-direction: column; gap: 10px; margin-top: 22px; }
-    .pp-btn-wpp-form { display: flex; align-items: center; justify-content: center; gap: 10px; background: #25d366; color: #fff; border: none; border-radius: 6px; padding: 15px 24px; font-family: var(--font-body); font-weight: 600; font-size: 15px; cursor: pointer; text-decoration: none; transition: background .18s; }
+    .pp-form-field select { color: rgba(255,255,255,.52); }
+    .pp-form-field select option { background: #1a2235; }
+    .pp-form-actions { display: flex; gap: 12px; margin-top: 28px; flex-wrap: wrap; }
+    .pp-btn-wpp-form { display: inline-flex; align-items: center; gap: 9px; background: #25d366; color: #fff; border: none; border-radius: 100px; padding: 13px 24px; font-family: var(--font-body); font-weight: 600; font-size: 15px; cursor: pointer; text-decoration: none; transition: background .18s; white-space: nowrap; }
     .pp-btn-wpp-form:hover { background: #1da851; }
-    .pp-btn-submit-form { display: block; width: 100%; background: #0088e7; color: #fff; border: none; border-radius: 6px; padding: 15px 24px; font-family: var(--font-body); font-weight: 600; font-size: 15px; cursor: pointer; text-align: center; transition: background .18s; }
-    .pp-btn-submit-form:hover { background: #006ec0; }
-    .pp-form-note { font-family: var(--font-body); font-size: 12px; color: rgba(255,255,255,0.28); margin-top: 14px; line-height: 1.4; }
-    /* login cards */
-    .pp-login-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-width: 680px; }
-    .pp-login-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; padding: 28px; display: flex; flex-direction: column; gap: 12px; }
-    .pp-login-card-label { font-family: var(--font-mono); font-size: 11px; font-weight: 600; letter-spacing: .1em; color: #0088e7; text-transform: uppercase; }
-    .pp-login-card-desc { font-family: var(--font-body); font-size: 15px; line-height: 1.5; color: rgba(255,255,255,0.58); flex: 1; }
-    .pp-login-card-btn { display: inline-block; background: #0088e7; color: #fff; text-decoration: none; padding: 12px 24px; border-radius: 4px; font-family: var(--font-body); font-weight: 600; font-size: 14px; text-align: center; transition: background .18s; }
+    .pp-btn-submit-form { display: inline-flex; align-items: center; gap: 8px; background: transparent; border: 1px solid rgba(255,255,255,.25); color: rgba(255,255,255,.7); border-radius: 100px; padding: 13px 24px; font-family: var(--font-body); font-weight: 500; font-size: 14px; cursor: pointer; transition: border-color .18s, color .18s; white-space: nowrap; }
+    .pp-btn-submit-form:hover { border-color: rgba(255,255,255,.55); color: #fff; }
+    .pp-form-note { font-family: var(--font-mono); font-size: 11px; color: rgba(255,255,255,.25); margin-top: 16px; line-height: 1.5; }
+    .pp-login-header { margin-bottom: 28px; }
+    .pp-login-header h3 { font-family: var(--font-heading); font-weight: 600; font-size: 22px; color: #fff; margin-bottom: 6px; }
+    .pp-login-header p { font-family: var(--font-body); font-size: 15px; color: rgba(255,255,255,.45); }
+    .pp-login-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; max-width: 460px; }
+    .pp-login-card { background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.1); border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 10px; transition: border-color .2s, background .2s; }
+    .pp-login-card:hover { border-color: rgba(0,136,231,.5); background: rgba(0,136,231,.06); }
+    .pp-login-card-icon { width: 36px; height: 36px; border-radius: 8px; background: rgba(0,136,231,.18); display: flex; align-items: center; justify-content: center; }
+    .pp-login-card-icon svg { width: 18px; height: 18px; stroke: #0088e7; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .pp-login-card-label { font-family: var(--font-heading); font-weight: 700; font-size: 16px; color: #fff; }
+    .pp-login-card-desc { font-family: var(--font-body); font-size: 13px; line-height: 1.5; color: rgba(255,255,255,.45); flex: 1; }
+    .pp-login-card-btn { display: inline-flex; align-items: center; gap: 6px; background: #0088e7; color: #fff; text-decoration: none; padding: 10px 18px; border-radius: 100px; font-family: var(--font-body); font-weight: 600; font-size: 13px; transition: background .18s; width: fit-content; }
     .pp-login-card-btn:hover { background: #006ec0; }
 
     /* ═══════════ PARA-PARCEIROS ═══════════ */
@@ -1693,8 +1708,6 @@
     <div class="container">
       <button class="subnav-tab active" data-tab="principal">Principal</button>
       <button class="subnav-tab" data-tab="central">Central do Parceiro</button>
-      <button class="subnav-tab" data-tab="faq">FAQ</button>
-      <button class="subnav-tab" data-tab="blog">Blog</button>
     </div>
   </nav>
 
@@ -1862,98 +1875,85 @@
 
   <!-- ABA: CENTRAL DO PARCEIRO -->
   <div class="tab-panel" data-tab="central">
-<!-- CENTRAL DO PARCEIRO -->
-  <section class="pp-central reveal" id="central">
-    <div class="pp-central-inner">
-      <div class="pp-central-tag">Área Exclusiva</div>
-      <h2 class="pp-central-title">Central do Parceiro</h2>
-      <p class="pp-central-desc">Acesso à plataforma de operações, portfólio de retomados e envio de oportunidades.</p>
+  <section class="pp-central" id="central">
+    <div class="pp-central-wrap">
 
-      <div class="pp-central-tabs">
-        <button class="pp-central-tab" id="tab-cadastro" onclick="ppTab('cadastro')">Novo cadastro</button>
-        <button class="pp-central-tab active" id="tab-login" onclick="ppTab('login')">Já sou parceiro</button>
-      </div>
+      <div class="pp-central-left">
+        <h2 class="pp-central-title">Central do Parceiro</h2>
+        <p class="pp-central-desc">Acesse a plataforma de operações, envie oportunidades e acompanhe seu portfólio de retomados.</p>
+        <div class="pp-central-tabs">
+          <button class="pp-central-tab" id="tab-cadastro" onclick="ppTab('cadastro')">Novo cadastro</button>
+          <button class="pp-central-tab active" id="tab-login" onclick="ppTab('login')">Já sou parceiro</button>
+        </div>
 
-      <!-- NOVO CADASTRO -->
-      <div id="panel-cadastro" style="display:none">
-        <div class="pp-form-card">
-          <p class="pp-form-card-title">Solicitação de cadastro como parceiro Trajetto</p>
-          <form onsubmit="ppSubmit(event)">
-            <div class="pp-form-field"><input type="text" name="razao" placeholder="Razão social" required /></div>
-            <div class="pp-form-field"><input type="text" name="cnpj" placeholder="CNPJ" required /></div>
-            <div class="pp-form-field"><input type="text" name="responsavel" placeholder="Nome do responsável" required /></div>
-            <div class="pp-form-field"><input type="tel" name="whatsapp" placeholder="WhatsApp" required /></div>
-            <div class="pp-form-field"><input type="text" name="cidade" placeholder="Cidade / Estado" required /></div>
-            <div class="pp-form-field"><input type="text" name="parceria" placeholder="Tipo de parceria: Liquidez+ / Retomados / Ambos" /></div>
-            <div class="pp-form-field"><input type="text" name="volume" placeholder="Volume médio mensal de negociações" /></div>
-            <div class="pp-form-actions">
-              <a href="https://wa.me/5573999999999?text=Ol%C3%A1%2C+quero+me+cadastrar+como+parceiro+Trajetto." class="pp-btn-wpp-form" target="_blank" rel="noopener">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="#fff" xmlns="http://www.w3.org/2000/svg"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.02zM12.05 20.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24a8.2 8.2 0 0 1 8.24 8.25c0 4.54-3.7 8.23-8.24 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.15.16-.29.18-.54.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.24-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.42l-.48-.01c-.16 0-.43.06-.66.31s-.86.85-.86 2.07.89 2.4 1.01 2.56c.12.16 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28z"/></svg>
-                Iniciar cadastro pelo WhatsApp (mais rápido)
-              </a>
-              <button type="submit" class="pp-btn-submit-form">Enviar formulário de cadastro</button>
+        <div id="panel-cadastro" style="display:none">
+          <div class="pp-form-card">
+            <p class="pp-form-card-title">Dados da empresa</p>
+            <form onsubmit="ppSubmit(event)">
+              <div class="pp-form-row">
+                <div class="pp-form-field"><label>Razão social</label><input type="text" name="razao" placeholder="Nome da empresa" required /></div>
+                <div class="pp-form-field"><label>CNPJ</label><input type="text" name="cnpj" placeholder="00.000.000/0001-00" required /></div>
+              </div>
+              <div class="pp-form-row">
+                <div class="pp-form-field"><label>Responsável</label><input type="text" name="responsavel" placeholder="Nome completo" required /></div>
+                <div class="pp-form-field"><label>WhatsApp</label><input type="tel" name="whatsapp" placeholder="(00) 00000-0000" required /></div>
+              </div>
+              <div class="pp-form-row">
+                <div class="pp-form-field"><label>Cidade / Estado</label><input type="text" name="cidade" placeholder="São Paulo, SP" required /></div>
+                <div class="pp-form-field"><label>Tipo de parceria</label><select name="parceria"><option value="">Selecione</option><option>Liquidez+</option><option>Portfólio de Retomados</option><option>Ambos</option></select></div>
+              </div>
+              <div class="pp-form-field"><label>Volume médio mensal</label><input type="text" name="volume" placeholder="Ex: 10 a 30 operações / mês" /></div>
+              <div class="pp-form-actions">
+                <a href="https://wa.me/5573999999999?text=Ol%C3%A1%2C+quero+me+cadastrar+como+parceiro+Trajetto." class="pp-btn-wpp-form" target="_blank" rel="noopener">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="#fff" xmlns="http://www.w3.org/2000/svg"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.02zM12.05 20.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24a8.2 8.2 0 0 1 8.24 8.25c0 4.54-3.7 8.23-8.24 8.23z"/></svg>
+                  Cadastrar pelo WhatsApp
+                </a>
+                <button type="submit" class="pp-btn-submit-form">Enviar formulário</button>
+              </div>
+              <p class="pp-form-note">Análise de perfil em até 48 horas úteis. Nenhuma taxa de adesão.</p>
+            </form>
+          </div>
+        </div>
+
+        <div id="panel-login">
+          <div class="pp-login-header">
+            <h3>Acesse sua área</h3>
+            <p>Escolha a plataforma que deseja acessar.</p>
+          </div>
+          <div class="pp-login-cards">
+            <div class="pp-login-card">
+              <div class="pp-login-card-icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+              </div>
+              <div class="pp-login-card-label">Plataforma Liquidez+</div>
+              <p class="pp-login-card-desc">Envio e acompanhamento de operações de clientes financiados em tempo real.</p>
+              <a href="#" class="pp-login-card-btn">Acessar &rarr;</a>
             </div>
-            <p class="pp-form-note">Cadastros aprovados mediante análise de perfil. Retorno em até 48 horas úteis.</p>
-          </form>
+            <div class="pp-login-card">
+              <div class="pp-login-card-icon">
+                <svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+              </div>
+              <div class="pp-login-card-label">Portfólio de Retomados</div>
+              <p class="pp-login-card-desc">Catálogo atualizado de veículos disponíveis antes do leilão e do mercado aberto.</p>
+              <a href="#" class="pp-login-card-btn">Ver portfólio &rarr;</a>
+            </div>
+          </div>
         </div>
       </div>
 
-      <!-- JÁ SOU PARCEIRO -->
-      <div id="panel-login">
-        <div class="pp-login-cards">
-          <div class="pp-login-card">
-            <span class="pp-login-card-label">Plataforma Liquidez+</span>
-            <p class="pp-login-card-desc">Envio e acompanhamento de operações de clientes financiados em tempo real.</p>
-            <a href="#" class="pp-login-card-btn">Acessar plataforma &rarr;</a>
-          </div>
-          <div class="pp-login-card">
-            <span class="pp-login-card-label">Portfólio de Retomados</span>
-            <p class="pp-login-card-desc">Acesso ao catálogo atualizado de veículos retomados disponíveis para parceiros credenciados.</p>
-            <a href="#" class="pp-login-card-btn">Ver portfólio &rarr;</a>
-          </div>
+      <div class="pp-central-right">
+        <img src="assets/pp-portfolio.webp" alt="Parceiro Trajetto" loading="lazy" />
+        <div class="pp-central-right-overlay"></div>
+        <div class="pp-central-right-quote">
+          <blockquote>&ldquo;A parceria com a Trajetto nos permitiu dobrar o volume de operações sem aumentar o risco jurídico ou a burocracia.&rdquo;</blockquote>
+          <cite>Parceiro Trajetto &mdash; Revenda SP</cite>
         </div>
       </div>
+
     </div>
   </section>
   </div><!-- /ABA CENTRAL -->
 
-  <!-- ABA: FAQ -->
-  <div class="tab-panel" data-tab="faq">
-    <section class="pp-faq-wrap">
-      <div class="pp-faq-inner">
-        <div class="pp-faq-head">
-          <div class="section-tag" style="text-transform:none;letter-spacing:0;">Dúvidas de parceiros</div>
-          <h2>Perguntas frequentes</h2>
-          <p>O que lojas, revendas e empresas precisam saber antes de fechar parceria.</p>
-        </div>
-        <div class="accordion">
-          <details open><summary class="accordion-summary"><span class="accordion-q">Como funciona o modelo Liquidez+?</span><span class="accordion-icon"></span></summary><div class="accordion-body"><p class="accordion-a">A loja traz o cliente com financiamento ativo e a Trajetto estrutura a quitação e a operação financeira. A loja recebe pela originação, sem assumir o risco jurídico.</p></div></details>
-          <details><summary class="accordion-summary"><span class="accordion-q">O que é o portfólio de retomados?</span><span class="accordion-icon"></span></summary><div class="accordion-body"><p class="accordion-a">Catálogo exclusivo de veículos retomados por financeiras, disponibilizado a parceiros credenciados antes de chegar ao leilão e ao mercado aberto.</p></div></details>
-          <details><summary class="accordion-summary"><span class="accordion-q">Preciso de CNPJ para ser parceiro?</span><span class="accordion-icon"></span></summary><div class="accordion-body"><p class="accordion-a">Sim. A parceria é voltada para lojas, revendas e empresas do setor automotivo com CNPJ ativo.</p></div></details>
-          <details><summary class="accordion-summary"><span class="accordion-q">Quanto tempo leva a aprovação do cadastro?</span><span class="accordion-icon"></span></summary><div class="accordion-body"><p class="accordion-a">Retorno em até 48 horas úteis após o envio do cadastro, mediante análise de perfil.</p></div></details>
-          <details><summary class="accordion-summary"><span class="accordion-q">Tem custo para entrar na parceria?</span><span class="accordion-icon"></span></summary><div class="accordion-body"><p class="accordion-a">Não há taxa de adesão. A remuneração acontece por operação realizada, conforme o modelo escolhido.</p></div></details>
-        </div>
-      </div>
-    </section>
-  </div><!-- /ABA FAQ -->
-
-  <!-- ABA: BLOG -->
-  <div class="tab-panel" data-tab="blog">
-    <section class="pp-blog">
-      <div class="pp-blog-inner">
-        <div class="pp-blog-header">
-          <div class="section-tag" style="text-transform:none;letter-spacing:0;">Conteúdo</div>
-          <h2 class="pp-blog-heading">Blog</h2>
-          <p class="pp-blog-sub">Estratégia, margem e operação para lojas e revendas que querem crescer com inteligência financeira.</p>
-        </div>
-        <div class="pp-blog-grid">
-          <article class="pp-blog-card"><div class="pp-blog-thumb"><span>Trajetto</span></div><div class="pp-blog-body"><span class="pp-blog-cat">Liquidez+</span><h3 class="pp-blog-title">Como transformar clientes financiados em margem para a loja</h3><p class="pp-blog-excerpt">O modelo Liquidez+ destrava operações que muitas lojas deixam na mesa por falta de estrutura financeira.</p><span class="pp-blog-soon">Em breve</span></div></article>
-          <article class="pp-blog-card"><div class="pp-blog-thumb"><span>Trajetto</span></div><div class="pp-blog-body"><span class="pp-blog-cat">Retomados</span><h3 class="pp-blog-title">Portfólio de retomados: margem antes do leilão</h3><p class="pp-blog-excerpt">Por que o acesso antecipado a veículos retomados é uma vantagem competitiva para o parceiro.</p><span class="pp-blog-soon">Em breve</span></div></article>
-          <article class="pp-blog-card"><div class="pp-blog-thumb"><span>Trajetto</span></div><div class="pp-blog-body"><span class="pp-blog-cat">Operação</span><h3 class="pp-blog-title">Menos burocracia, mais volume: o papel da Trajetto</h3><p class="pp-blog-excerpt">Como terceirizar a complexidade financeira e jurídica e focar no que a loja faz melhor: vender.</p><span class="pp-blog-soon">Em breve</span></div></article>
-        </div>
-      </div>
-    </section>
-  </div><!-- /ABA BLOG -->
 
 
   <!-- FOOTER -->
