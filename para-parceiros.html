@@ -1067,15 +1067,66 @@
     /* hamburger oculto no desktop */
     .navbar-toggle { display: none; }
 
-    /* ═══════════ PP DARK INVERSION ═══════════ */
+    /* ═══════════ PP DARK INVERSION (navbar + footer ficam claros) ═══════════ */
     body.pp-page { background: #0b0f1a; color: #fff; }
-    body.pp-page .navbar { background: #0b0f1a; box-shadow: 0 1px 0 rgba(255,255,255,0.07); }
-    body.pp-page .navbar .navbar-divider { background: rgba(255,255,255,0.14); }
-    body.pp-page .navbar-links a { color: rgba(255,255,255,0.58); }
-    body.pp-page .navbar-links a:hover { color: #fff; }
-    body.pp-page .navbar-links a.pp-active { color: #fff; font-weight: 600; border-bottom: 2px solid #0088e7; padding-bottom: 2px; }
-    body.pp-page .navbar-cta { background: #fff !important; color: #031cad !important; }
-    body.pp-page .navbar-toggle span { background: #fff; }
+    body.pp-page footer { background: #fff; position: relative; z-index: 1; }
+    /* esconde os paths brancos dos vetores decorativos no tema dark */
+    body.pp-page .pp-onboarding-bg path[fill="#fff"],
+    body.pp-page .pp-liquidez-bg path[fill="#fff"] { fill: transparent; }
+
+    /* ─── SUBNAV (abas, claro como em clientes) ─── */
+    .subnav { position: sticky; top: 64px; z-index: 90; background: #fff; border-bottom: 0.8px solid #e7e0df; height: 56px; }
+    .subnav .container { height: 100%; display: flex; align-items: center; gap: 2px; overflow-x: auto; scrollbar-width: none; }
+    .subnav .container::-webkit-scrollbar { display: none; }
+    .subnav-tab { padding: 0 18px; height: 100%; display: inline-flex; align-items: center; font-family: var(--font-body); font-size: 16px; color: var(--text-body); text-decoration: none; background: none; border: none; border-bottom: 2px solid transparent; cursor: pointer; white-space: nowrap; transition: color .2s, border-color .2s; }
+    .subnav-tab:hover { color: var(--blue-dark); }
+    .subnav-tab.active { color: var(--blue-dark); border-bottom-color: var(--blue-dark); font-weight: 600; }
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+
+    /* ─── SEÇÕES DARK (parceiros) ─── */
+    body.pp-page .pp-liquidez, body.pp-page .pp-portfolio, body.pp-page .pp-onboarding { background: #0b0f1a; }
+    body.pp-page .pp-liquidez-title, body.pp-page .pp-portfolio-title, body.pp-page .pp-onboarding-title { color: #fff; }
+    body.pp-page .pp-liquidez-desc, body.pp-page .pp-portfolio-desc, body.pp-page .pp-portfolio-note { color: rgba(255,255,255,.6); }
+    body.pp-page .pp-model { background: #121826; box-shadow: none; border: 1px solid rgba(255,255,255,.08); }
+    body.pp-page .pp-model-title { color: #fff; }
+    body.pp-page .pp-model-flow, body.pp-page .pp-model-text { color: rgba(255,255,255,.55); }
+    body.pp-page .pp-portfolio-hl { border-top-color: rgba(255,255,255,.14); }
+    body.pp-page .pp-portfolio-hl span { color: #fff; }
+    body.pp-page .pp-step-title { color: #fff; }
+    body.pp-page .pp-step-desc { color: rgba(255,255,255,.62); }
+    body.pp-page .pp-antecipe { background: #0d1322; }
+    body.pp-page .pp-antecipe-card { background: #121826; border-color: rgba(255,255,255,.08); box-shadow: none; }
+    body.pp-page .pp-antecipe-card h3 { color: #fff; }
+    body.pp-page .pp-antecipe-card p { color: rgba(255,255,255,.62); }
+    body.pp-page .pp-pill { border-color: rgba(255,255,255,.32); color: #fff; backdrop-filter: none; }
+    body.pp-page .pp-antecipe-title { color: #fff; }
+    body.pp-page .section-tag { color: #3da0ee; }
+
+    /* ─── FAQ + BLOG (parceiros, dark) ─── */
+    .pp-faq-wrap { padding: 64px var(--pad) 80px; background: #0b0f1a; }
+    .pp-faq-inner { max-width: 860px; margin: 0 auto; }
+    .pp-faq-head { text-align: center; margin-bottom: 36px; }
+    .pp-faq-head h2 { font-family: var(--font-heading); font-weight: 600; font-size: 42px; color: #fff; margin: 10px 0 12px; }
+    .pp-faq-head p { font-family: var(--font-body); font-size: 18px; color: rgba(255,255,255,.55); }
+    body.pp-page .accordion details { border-color: rgba(255,255,255,.12); }
+    body.pp-page .accordion-q { color: #fff; }
+    body.pp-page .accordion-a { color: rgba(255,255,255,.62); }
+    body.pp-page .accordion-icon { color: #3da0ee; }
+    .pp-blog { padding: 64px var(--pad) 80px; background: #0b0f1a; }
+    .pp-blog-inner { max-width: 1216px; margin: 0 auto; }
+    .pp-blog-header { max-width: 720px; margin-bottom: 40px; }
+    .pp-blog-heading { font-family: var(--font-heading); font-weight: 600; font-size: 42px; color: #fff; margin: 10px 0 14px; }
+    .pp-blog-sub { font-family: var(--font-body); font-size: 18px; line-height: 1.5; color: rgba(255,255,255,.55); }
+    .pp-blog-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+    .pp-blog-card { background: #121826; border: 1px solid rgba(255,255,255,.08); border-radius: 0 12px 0 12px; overflow: hidden; display: flex; flex-direction: column; }
+    .pp-blog-thumb { aspect-ratio: 16/10; background: linear-gradient(135deg, var(--blue-mid), var(--blue-dark)); display: flex; align-items: center; justify-content: center; }
+    .pp-blog-thumb span { color: rgba(255,255,255,.9); font-family: var(--font-heading); font-weight: 600; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; }
+    .pp-blog-body { padding: 22px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+    .pp-blog-cat { font-family: var(--font-heading); font-weight: 600; font-size: 12px; letter-spacing: .05em; text-transform: uppercase; color: #3da0ee; }
+    .pp-blog-title { font-family: var(--font-heading); font-weight: 600; font-size: 19px; line-height: 1.25; color: #fff; }
+    .pp-blog-excerpt { font-family: var(--font-body); font-size: 14px; line-height: 1.5; color: rgba(255,255,255,.55); flex: 1; }
+    .pp-blog-soon { display: inline-block; margin-top: 6px; font-family: var(--font-heading); font-weight: 600; font-size: 13px; color: rgba(255,255,255,.4); }
     /* hero dark */
     body.pp-page .pp-hero { background: #0b0f1a; }
     body.pp-page .pp-hero-title { color: #fff; }
@@ -1190,11 +1241,20 @@
       .section-heading, .services-heading-main,
       .reviews-heading, .faq-heading, .como-heading,
       .veiculo-heading { font-size: 36px !important; }
+      .pp-blog-grid { grid-template-columns: repeat(2,1fr); }
     }
 
     /* ═══════════ MOBILE (≤768px) ═══════════ */
     @media (max-width: 768px) {
       :root { --pad: 20px; }
+
+      /* SUBNAV + abas parceiros */
+      .subnav { top: 64px; height: 52px; }
+      .subnav-tab { font-size: 15px; padding: 0 14px; }
+      .pp-faq-wrap, .pp-blog { padding: 40px var(--pad) 48px; }
+      .pp-blog-grid { grid-template-columns: 1fr; gap: 16px; }
+      .pp-faq-head h2, .pp-blog-heading { font-size: 28px; }
+      .pp-faq-head p, .pp-blog-sub { font-size: 15px; }
 
       /* HEADLINES MOBILE — sem palavras orfas, tamanho confortavel */
       h1, h2, h3 { text-wrap: balance; overflow-wrap: break-word; }
@@ -1596,16 +1656,30 @@
         </a>
         <div class="navbar-divider"></div>
         <nav class="navbar-links">
-          <a href="/">Principal</a>
-          <a href="/para-parceiros#central" class="pp-active">Central do Parceiro</a>
+          <a href="/para-clientes">Para Clientes</a>
+          <a href="/para-parceiros">Para Parceiros</a>
         </nav>
       </div>
-      <a href="/para-parceiros#central" class="btn btn-primary navbar-cta">Área do Parceiro</a>
+      <a href="/para-parceiros" class="btn btn-primary navbar-cta">Conhecer parceria</a>
       <button class="navbar-toggle" aria-label="Menu" onclick="document.querySelector('.navbar').classList.toggle('open')">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
+
+  <!-- SUBNAV (abas) -->
+  <nav class="subnav" aria-label="Seções Para Parceiros">
+    <div class="container">
+      <button class="subnav-tab active" data-tab="principal">Principal</button>
+      <button class="subnav-tab" data-tab="central">Central do Parceiro</button>
+      <button class="subnav-tab" data-tab="faq">FAQ</button>
+      <button class="subnav-tab" data-tab="blog">Blog</button>
+    </div>
+  </nav>
+
+  <!-- ABA: PRINCIPAL -->
+  <div class="tab-panel active" data-tab="principal">
+
 
   <!-- HERO -->
   <section class="pp-hero reveal">
@@ -1626,62 +1700,10 @@
     </div>
   </section>
 
-  <!-- CENTRAL DO PARCEIRO -->
-  <section class="pp-central reveal" id="central">
-    <div class="pp-central-inner">
-      <div class="pp-central-tag">Área Exclusiva</div>
-      <h2 class="pp-central-title">Central do Parceiro</h2>
-      <p class="pp-central-desc">Acesso à plataforma de operações, portfólio de retomados e envio de oportunidades.</p>
-
-      <div class="pp-central-tabs">
-        <button class="pp-central-tab" id="tab-cadastro" onclick="ppTab('cadastro')">Novo cadastro</button>
-        <button class="pp-central-tab active" id="tab-login" onclick="ppTab('login')">Já sou parceiro</button>
-      </div>
-
-      <!-- NOVO CADASTRO -->
-      <div id="panel-cadastro" style="display:none">
-        <div class="pp-form-card">
-          <p class="pp-form-card-title">Solicitação de cadastro como parceiro Trajetto</p>
-          <form onsubmit="ppSubmit(event)">
-            <div class="pp-form-field"><input type="text" name="razao" placeholder="Razão social" required /></div>
-            <div class="pp-form-field"><input type="text" name="cnpj" placeholder="CNPJ" required /></div>
-            <div class="pp-form-field"><input type="text" name="responsavel" placeholder="Nome do responsável" required /></div>
-            <div class="pp-form-field"><input type="tel" name="whatsapp" placeholder="WhatsApp" required /></div>
-            <div class="pp-form-field"><input type="text" name="cidade" placeholder="Cidade / Estado" required /></div>
-            <div class="pp-form-field"><input type="text" name="parceria" placeholder="Tipo de parceria: Liquidez+ / Retomados / Ambos" /></div>
-            <div class="pp-form-field"><input type="text" name="volume" placeholder="Volume médio mensal de negociações" /></div>
-            <div class="pp-form-actions">
-              <a href="https://wa.me/5573999999999?text=Ol%C3%A1%2C+quero+me+cadastrar+como+parceiro+Trajetto." class="pp-btn-wpp-form" target="_blank" rel="noopener">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="#fff" xmlns="http://www.w3.org/2000/svg"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.02zM12.05 20.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24a8.2 8.2 0 0 1 8.24 8.25c0 4.54-3.7 8.23-8.24 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.15.16-.29.18-.54.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.24-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.42l-.48-.01c-.16 0-.43.06-.66.31s-.86.85-.86 2.07.89 2.4 1.01 2.56c.12.16 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28z"/></svg>
-                Iniciar cadastro pelo WhatsApp (mais rápido)
-              </a>
-              <button type="submit" class="pp-btn-submit-form">Enviar formulário de cadastro</button>
-            </div>
-            <p class="pp-form-note">Cadastros aprovados mediante análise de perfil. Retorno em até 48 horas úteis.</p>
-          </form>
-        </div>
-      </div>
-
-      <!-- JÁ SOU PARCEIRO -->
-      <div id="panel-login">
-        <div class="pp-login-cards">
-          <div class="pp-login-card">
-            <span class="pp-login-card-label">Plataforma Liquidez+</span>
-            <p class="pp-login-card-desc">Envio e acompanhamento de operações de clientes financiados em tempo real.</p>
-            <a href="#" class="pp-login-card-btn">Acessar plataforma &rarr;</a>
-          </div>
-          <div class="pp-login-card">
-            <span class="pp-login-card-label">Portfólio de Retomados</span>
-            <p class="pp-login-card-desc">Acesso ao catálogo atualizado de veículos retomados disponíveis para parceiros credenciados.</p>
-            <a href="#" class="pp-login-card-btn">Ver portfólio &rarr;</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  
 
   <!-- PLACEHOLDER LIQUIDEZ+ (removido) -->
-  <section class="pp-liquidez" style="display:none">
+  <section class="pp-liquidez">
     <div class="pp-liquidez-bg">
       <svg viewBox="0 0 1722.54 1748.57" width="100%" height="100%" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M206.483 827.519C280.772 777.666 588.324 692.782 588.324 692.782L556.799 821.372L510.959 781.314L526.102 1004.53L476.529 1036.58L751.573 1276.93L966.195 753.788L1189.81 744.604L1205.34 973.539L1162.56 936.151C1162.56 936.151 1066.6 1387.03 1004.11 1524.54C941.617 1662.05 779.921 1710.9 680.233 1623.78L166.818 1175.13C17.0722 1044.27 132.194 877.372 206.483 827.519Z" fill="#fff"/>
@@ -1717,7 +1739,7 @@
   </section>
 
   <!-- PORTFÓLIO DE RETOMADOS (removido da pp-page) -->
-  <section class="pp-portfolio" style="display:none">
+  <section class="pp-portfolio">
     <div class="pp-portfolio-inner">
       <div class="pp-portfolio-img reveal"><img src="assets/pp-portfolio.webp" alt="Portfólio de veículos retomados" loading="lazy" /></div>
       <div class="pp-portfolio-text reveal">
@@ -1733,7 +1755,7 @@
   </section>
 
   <!-- ANTECIPE SEUS GANHOS (removido da pp-page) -->
-  <section class="pp-antecipe" style="display:none">
+  <section class="pp-antecipe">
     <div class="pp-antecipe-inner">
       <div class="pp-pill reveal">Por que ser parceiro?</div>
       <h2 class="pp-antecipe-title reveal">Antecipe seus ganhos em</h2>
@@ -1755,7 +1777,7 @@
   </section>
 
   <!-- PROCESSO DE ONBOARDING (removido da pp-page) -->
-  <section class="pp-onboarding" id="onboarding" style="display:none">
+  <section class="pp-onboarding" id="onboarding">
     <div class="pp-onboarding-bg">
       <svg viewBox="0 0 1683.63 1537.14" width="100%" height="100%" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M1409.47 438.86C1320.83 426.718 1007.26 485.598 1007.26 485.598L1092.08 587.26L1115.65 531.134L1200.12 738.299L1258.74 745.315L1117.27 1082.07L694.62 706.427L489.709 796.429L576.346 1008.91L598.352 956.522C598.352 956.522 882.654 1319.39 999.211 1415.45C1115.77 1511.52 1282.48 1484.36 1333.76 1362.3L1597.83 733.69C1674.85 550.344 1498.1 451.003 1409.47 438.86Z" fill="#fff"/>
@@ -1813,6 +1835,105 @@
       </div>
     </div>
   </section>
+
+  
+  </div><!-- /ABA PRINCIPAL -->
+
+  <!-- ABA: CENTRAL DO PARCEIRO -->
+  <div class="tab-panel" data-tab="central">
+<!-- CENTRAL DO PARCEIRO -->
+  <section class="pp-central reveal" id="central">
+    <div class="pp-central-inner">
+      <div class="pp-central-tag">Área Exclusiva</div>
+      <h2 class="pp-central-title">Central do Parceiro</h2>
+      <p class="pp-central-desc">Acesso à plataforma de operações, portfólio de retomados e envio de oportunidades.</p>
+
+      <div class="pp-central-tabs">
+        <button class="pp-central-tab" id="tab-cadastro" onclick="ppTab('cadastro')">Novo cadastro</button>
+        <button class="pp-central-tab active" id="tab-login" onclick="ppTab('login')">Já sou parceiro</button>
+      </div>
+
+      <!-- NOVO CADASTRO -->
+      <div id="panel-cadastro" style="display:none">
+        <div class="pp-form-card">
+          <p class="pp-form-card-title">Solicitação de cadastro como parceiro Trajetto</p>
+          <form onsubmit="ppSubmit(event)">
+            <div class="pp-form-field"><input type="text" name="razao" placeholder="Razão social" required /></div>
+            <div class="pp-form-field"><input type="text" name="cnpj" placeholder="CNPJ" required /></div>
+            <div class="pp-form-field"><input type="text" name="responsavel" placeholder="Nome do responsável" required /></div>
+            <div class="pp-form-field"><input type="tel" name="whatsapp" placeholder="WhatsApp" required /></div>
+            <div class="pp-form-field"><input type="text" name="cidade" placeholder="Cidade / Estado" required /></div>
+            <div class="pp-form-field"><input type="text" name="parceria" placeholder="Tipo de parceria: Liquidez+ / Retomados / Ambos" /></div>
+            <div class="pp-form-field"><input type="text" name="volume" placeholder="Volume médio mensal de negociações" /></div>
+            <div class="pp-form-actions">
+              <a href="https://wa.me/5573999999999?text=Ol%C3%A1%2C+quero+me+cadastrar+como+parceiro+Trajetto." class="pp-btn-wpp-form" target="_blank" rel="noopener">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="#fff" xmlns="http://www.w3.org/2000/svg"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.02zM12.05 20.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24a8.2 8.2 0 0 1 8.24 8.25c0 4.54-3.7 8.23-8.24 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.15.16-.29.18-.54.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.24-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.42l-.48-.01c-.16 0-.43.06-.66.31s-.86.85-.86 2.07.89 2.4 1.01 2.56c.12.16 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28z"/></svg>
+                Iniciar cadastro pelo WhatsApp (mais rápido)
+              </a>
+              <button type="submit" class="pp-btn-submit-form">Enviar formulário de cadastro</button>
+            </div>
+            <p class="pp-form-note">Cadastros aprovados mediante análise de perfil. Retorno em até 48 horas úteis.</p>
+          </form>
+        </div>
+      </div>
+
+      <!-- JÁ SOU PARCEIRO -->
+      <div id="panel-login">
+        <div class="pp-login-cards">
+          <div class="pp-login-card">
+            <span class="pp-login-card-label">Plataforma Liquidez+</span>
+            <p class="pp-login-card-desc">Envio e acompanhamento de operações de clientes financiados em tempo real.</p>
+            <a href="#" class="pp-login-card-btn">Acessar plataforma &rarr;</a>
+          </div>
+          <div class="pp-login-card">
+            <span class="pp-login-card-label">Portfólio de Retomados</span>
+            <p class="pp-login-card-desc">Acesso ao catálogo atualizado de veículos retomados disponíveis para parceiros credenciados.</p>
+            <a href="#" class="pp-login-card-btn">Ver portfólio &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </div><!-- /ABA CENTRAL -->
+
+  <!-- ABA: FAQ -->
+  <div class="tab-panel" data-tab="faq">
+    <section class="pp-faq-wrap">
+      <div class="pp-faq-inner">
+        <div class="pp-faq-head">
+          <div class="section-tag" style="text-transform:none;letter-spacing:0;">Dúvidas de parceiros</div>
+          <h2>Perguntas frequentes</h2>
+          <p>O que lojas, revendas e empresas precisam saber antes de fechar parceria.</p>
+        </div>
+        <div class="accordion">
+          <details open><summary class="accordion-summary"><span class="accordion-q">Como funciona o modelo Liquidez+?</span><span class="accordion-icon"></span></summary><div class="accordion-body"><p class="accordion-a">A loja traz o cliente com financiamento ativo e a Trajetto estrutura a quitação e a operação financeira. A loja recebe pela originação, sem assumir o risco jurídico.</p></div></details>
+          <details><summary class="accordion-summary"><span class="accordion-q">O que é o portfólio de retomados?</span><span class="accordion-icon"></span></summary><div class="accordion-body"><p class="accordion-a">Catálogo exclusivo de veículos retomados por financeiras, disponibilizado a parceiros credenciados antes de chegar ao leilão e ao mercado aberto.</p></div></details>
+          <details><summary class="accordion-summary"><span class="accordion-q">Preciso de CNPJ para ser parceiro?</span><span class="accordion-icon"></span></summary><div class="accordion-body"><p class="accordion-a">Sim. A parceria é voltada para lojas, revendas e empresas do setor automotivo com CNPJ ativo.</p></div></details>
+          <details><summary class="accordion-summary"><span class="accordion-q">Quanto tempo leva a aprovação do cadastro?</span><span class="accordion-icon"></span></summary><div class="accordion-body"><p class="accordion-a">Retorno em até 48 horas úteis após o envio do cadastro, mediante análise de perfil.</p></div></details>
+          <details><summary class="accordion-summary"><span class="accordion-q">Tem custo para entrar na parceria?</span><span class="accordion-icon"></span></summary><div class="accordion-body"><p class="accordion-a">Não há taxa de adesão. A remuneração acontece por operação realizada, conforme o modelo escolhido.</p></div></details>
+        </div>
+      </div>
+    </section>
+  </div><!-- /ABA FAQ -->
+
+  <!-- ABA: BLOG -->
+  <div class="tab-panel" data-tab="blog">
+    <section class="pp-blog">
+      <div class="pp-blog-inner">
+        <div class="pp-blog-header">
+          <div class="section-tag" style="text-transform:none;letter-spacing:0;">Conteúdo</div>
+          <h2 class="pp-blog-heading">Blog</h2>
+          <p class="pp-blog-sub">Estratégia, margem e operação para lojas e revendas que querem crescer com inteligência financeira.</p>
+        </div>
+        <div class="pp-blog-grid">
+          <article class="pp-blog-card"><div class="pp-blog-thumb"><span>Trajetto</span></div><div class="pp-blog-body"><span class="pp-blog-cat">Liquidez+</span><h3 class="pp-blog-title">Como transformar clientes financiados em margem para a loja</h3><p class="pp-blog-excerpt">O modelo Liquidez+ destrava operações que muitas lojas deixam na mesa por falta de estrutura financeira.</p><span class="pp-blog-soon">Em breve</span></div></article>
+          <article class="pp-blog-card"><div class="pp-blog-thumb"><span>Trajetto</span></div><div class="pp-blog-body"><span class="pp-blog-cat">Retomados</span><h3 class="pp-blog-title">Portfólio de retomados: margem antes do leilão</h3><p class="pp-blog-excerpt">Por que o acesso antecipado a veículos retomados é uma vantagem competitiva para o parceiro.</p><span class="pp-blog-soon">Em breve</span></div></article>
+          <article class="pp-blog-card"><div class="pp-blog-thumb"><span>Trajetto</span></div><div class="pp-blog-body"><span class="pp-blog-cat">Operação</span><h3 class="pp-blog-title">Menos burocracia, mais volume: o papel da Trajetto</h3><p class="pp-blog-excerpt">Como terceirizar a complexidade financeira e jurídica e focar no que a loja faz melhor: vender.</p><span class="pp-blog-soon">Em breve</span></div></article>
+        </div>
+      </div>
+    </section>
+  </div><!-- /ABA BLOG -->
+
 
   <!-- FOOTER -->
   <footer>
@@ -1900,6 +2021,30 @@
         });
       }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
       els.forEach(el => io.observe(el));
+    })();
+
+    /* ───────── SUBNAV — abas (troca conteudo na propria pagina) ───────── */
+    (function(){
+      var tabs = document.querySelectorAll('.subnav-tab');
+      var panels = document.querySelectorAll('.tab-panel');
+      if(!tabs.length) return;
+      function activate(name, scroll){
+        var found = false;
+        tabs.forEach(function(t){ var on = t.dataset.tab===name; t.classList.toggle('active', on); if(on) found = true; });
+        if(!found){ name='principal'; tabs.forEach(function(t){ t.classList.toggle('active', t.dataset.tab==='principal'); }); }
+        panels.forEach(function(p){ p.classList.toggle('active', p.dataset.tab===name); });
+        if(scroll) window.scrollTo(0, 0);
+      }
+      tabs.forEach(function(t){
+        t.addEventListener('click', function(e){
+          e.preventDefault();
+          var n = t.dataset.tab;
+          activate(n, true);
+          history.replaceState(null, '', '#' + n);
+        });
+      });
+      var h = (location.hash || '').replace('#','');
+      activate(h || 'principal', false);
     })();
   </script>
 
